@@ -7,7 +7,7 @@ public class NewPage {
 	public void newPage()
 	{
 		System.out.println("hii");
-		System.out.println("hello");
+		System.out.println("helloo");
 	}
 
 }
