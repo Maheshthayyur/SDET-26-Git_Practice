@@ -14,4 +14,47 @@
 </dependency>
   
   </dependencies>
+  <profiles>
+  <profile>
+  <id>smoke</id>
+  <build>
+  <pluginManagement>
+  <plugins>
+   <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.smoke.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+      </plugins>
+       </pluginManagement>
+      </build>
+      </profile>
+      
+      
+      
+      
+       <profile>
+    
+  <id>reg</id>
+  <build>
+  <plugins>
+   <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.reg.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+      </plugins>
+      </build>
+      </profile>
+      </profiles>
 </project>
